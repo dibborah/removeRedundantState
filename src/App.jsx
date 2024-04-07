@@ -1,7 +1,9 @@
+import UserForm from "./UserForm";
+
 const App = () => {
   return (
     <div>
-      <h1>App</h1>
+      <UserForm/>
     </div>
   );
 };
