@@ -1,10 +1,9 @@
-import UserForm from "./UserForm";
+import Counter from "./Counter";
 
 const App = () => {
-  console.log("App rendered");
   return (
     <div>
-      <UserForm/>
+    <Counter />
     </div>
   );
 };
