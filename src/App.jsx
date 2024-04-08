@@ -1,9 +1,9 @@
-import RockBandList from "./RockBandList";
+import UserForm from "./UserForm";
 
 const App = () => {
   return (
     <div>
-    <RockBandList />
+      <UserForm />
     </div>
   );
 };

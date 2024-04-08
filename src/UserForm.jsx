@@ -3,10 +3,9 @@ import DisplayFullName from "./DisplayFullName";
 import TestComponent from "./TestComponent";
 
 const UserForm = () => {
-  console.log("Userform rendered");
+  console.log("Userform component rendered");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  //   const [fullName, setFullName] = useState("");
   const fullName = firstName + " " + lastName;
 
   // #Note: State Change TRIGGERS re-render
@@ -14,6 +13,11 @@ const UserForm = () => {
   // jab State change hogi to component aur uske child re-render hongge
   // lekin us component ka PARENT re-render nhi hoga
   // for ex-app
+
+  // React :
+  // Two types of component :
+  // 1. Controlled component => value attribute state component ko control karti hain
+  // 2. Uncontrolled component => value hata dene se control field ka, state se chut jata hain
 
   return (
     <form>
@@ -25,7 +29,6 @@ const UserForm = () => {
           value={firstName}
           onChange={(e) => {
             setFirstName(e.target.value);
-            // setFullName(e.target.value + " " + lastName);
           }}
         />
       </div>
@@ -39,9 +42,8 @@ const UserForm = () => {
           type="text"
           id="lastName"
           value={lastName}
-          onChange={(e) => {
+           onChange={(e) => {
             setLastName(e.target.value);
-            // setFullName(firstName + " " + e.target.value);
           }}
         />
       </div>
